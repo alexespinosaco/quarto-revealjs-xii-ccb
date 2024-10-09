@@ -8,7 +8,9 @@ contributes:
       theme: [default, custom.scss]
       width: 1920
       height: 1080
-      logo: xii-ccb-logo.png
+      logo: assets/xii-ccb-logo.png
       slide-number: true
       date-format: iso
+      controls: true
+
 
