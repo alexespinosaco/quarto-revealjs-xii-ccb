@@ -1,22 +1,273 @@
 ---
 title: "XII Congreso Colombiano de Botánica"
 subtitle: "Una plantilla de Quarto Revealjs"
-format:
-  xii-ccb-revealjs: default
+# date: last-modified
+
 author:
   - name: "Álex Espinosa-Correa"
     email: alex.espinosa@udea.edu.co
     orcid: 0000-0002-7353-1182
     affiliations: "Universidad de Antioquia"
-# date: last-modified
+
+lang: es
+
+bibliography: references.bib
+csl: apa.csl
+
+format:
+  xii-ccb-revealjs: default
 ---
 
-## Introduction
+## Introducción
 
-*TODO* Create an example file that demonstrates the formatting and features of your format.
+-   Esta es una plantilla de presentación para Quarto Reveal.js hecha por [Álex Espinosa-Correa](https://alexespinosaco.github.io) inspirada en la [presentación sugerida](https://congresobotanica.org/wp-content/uploads/2024/10/5.-QUINTA-Circular-XII-CCB-UNICAUCA-1.pdf) por el comité organizador del [XII Congreso Colombiano de Botánica](http://congresobotanica.org).
 
-## More Information
+-   [Quarto](https://quarto.org) es un sistema de publicación de código abierto para documentos técnicos y científicos que combina texto, código y salida. Aprenda a utilizar Quarto con opciones YAML, formatos, diapositivas, fuentes, colores, diseño y mucho más.
 
-You can learn more about controlling the appearance of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
+-   Quarto admite diversos formatos para crear presentaciones, entre ellos: [reveal.js](https://quarto.org/docs/presentations/revealjs/), PowerPoint, Beamer. Este es una pequeña demostración de las posibilidades de usar esta plantilla.
 
-## {background-image="_extensions/xii-ccb/assets/gracias.jpg" background-size="cover"}
+::: {.callout-warning}
+Esta presentación incluye código en R únicamente con fines demostrativos. Si no cuentas con este software, procede con precaución; puedes eliminar el código o desactivarlo según sea necesario.
+:::
+
+## Instalación
+
+En la terminal ejecute:
+
+::: {style="font-size: 70px"}
+``` bash
+quarto use template alexespinosaco/quarto-revealjs-xii-ccb
+```
+:::
+
+Esto instalará la extensión y creará varios archivos: 
+
+-   `_extesion`: carpeta donde se instala la extesión.
+
+-   `*.qmd`: archivo que puede utilizar como punto de partida para su presentación.
+
+-   `*.Rproj`: archivo de configuración de los proyectos de RStudio. 
+
+# {background-color="#BB954E" transition="slide-in"}
+
+[Posibilidades de Quarto]{.r-fit-text .color-letra}
+
+## Texto
+
+Puede incluir texto en *cursiva*, **negrilla**, ***cursiva y negrilla***. También puede incluir superíndices^2^, subíndices~2~, ~~tachado~~, `código puro` y [versalita]{.smallcaps}
+
+## Código
+:::columns
+:::{.column .fragment width=50%}
+Puede mostrar sólo el código:
+
+```{r}
+#| echo: true
+#| eval: false
+
+library(ggplot2)
+
+iris |> 
+  ggplot2::ggplot(
+    ggplot2::aes(x = Petal.Length, y = Petal.Width)
+  ) + 
+  ggplot2::geom_point(
+    ggplot2::aes(color = Species, shape = Species)
+  ) + 
+  ggplot2::geom_smooth(
+    formula = y ~ x, method = "loess"
+  ) + 
+  ggplot2::theme_classic()
+```
+:::
+  
+:::{.column .fragment width=50%}
+sólo el resultado:
+
+```{r}
+#| echo: false
+#| fig-dpi: 300
+
+library(ggplot2)
+
+iris |> 
+  ggplot2::ggplot(
+    ggplot2::aes(x = Petal.Length, y = Petal.Width)
+  ) + 
+  ggplot2::geom_point(
+    ggplot2::aes(color = Species, shape = Species)
+  ) + 
+  ggplot2::geom_smooth(
+    formula = y ~ x, method = "loess"
+  ) + 
+  ggplot2::theme_classic()
+```
+:::
+:::
+
+. . .
+
+O ambas cosas:
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| fig-dpi: 300
+
+library(ggplot2)
+
+iris |> 
+  ggplot2::ggplot(
+    ggplot2::aes(x = Petal.Length, y = Petal.Width)
+  ) + 
+  ggplot2::geom_point(
+    ggplot2::aes(color = Species, shape = Species)
+  ) + 
+  ggplot2::geom_smooth(
+    formula = y ~ x, method = "loess"
+  ) + 
+  ggplot2::theme_classic()
+```
+
+## Tablas
+
+Puedes incluir tablas[^1]^,^ [^2]:
+
+[^1]: Las tablas pueden ser generadas por código. 
+[^2]: Sí, también puedes incluir pie de página.
+
+| Por defecto | Izquierda | Derecha | Centro |
+|-------------|:----------|--------:|:------:|
+| 12          | 12        |      12 |   12   |
+| 123         | 123       |     123 |  123   |
+| 1           | 1         |       1 |   1    |
+
+: Con su correspondiente descripción.
+
+## Enlaces e imágenes
+
+Puede incluir [enlaces con nombre](http://geobota.github.io/) o direcciones directas <http://geobota.github.io/>.
+
+También puede incluir imágenes:
+
+:::columns
+:::{.column .fragment width=50%}
+![Con prefijo[^3] y descripción](_extensions/xii-ccb/assets/geobota_logo.png){#fig-geobota-logo width="674"}
+
+[^3]: También aplica para otros elementos como tablas o listas.
+:::
+:::{.column .fragment width=50%}
+![Sólo la descripción [^4].](_extensions/xii-ccb/assets/udea-logo.png){width="797"}
+
+[^4]: Puede omitirse
+:::
+:::
+
+## Imágenes de fondo {background-image="_extensions/xii-ccb/assets/final_1.jpg" background-size="cover"}
+
+## Listas y columnas
+
+Puede incluir listas y columnas.
+
+:::columns
+:::{.column .fragment width=50%}
+### Listas desordenadas
+-   Elemento 1
+    -   Sub-elemento 1
+        -   Sub-sub-elemento 1
+    -   Sub elemento 2
+-   Elemento 2
+:::
+
+:::{.column .fragment .incremental width=50%}
+### Listas ordenadas
+
+1.  Elemento 1
+    i)  Sub-lemento 1.1
+        A.  Sub-sub-elemento 1.1.1
+    i)  Sub-lemento 1.2
+1.  Elemento 2
+:::
+:::
+
+::: aside
+Los elementos de una lista pueden aparecer todos de una vez o de forma progresiva.
+
+Pueden ser más de dos columnas.
+:::
+
+## Citas, referencias y refencias cruzadas
+
+Puede incluir citaciones bibliográficas, como por ejemplo a este artículo sobre *Chrysochlamys* publicado por @caro-sánchez2024 o hacer refencia a objetos dentro de la misma presentación (@fig-geobota-logo).
+
+Las referencias se generan automática y aparecen en la última diapositiva, por lo que es recomendable dejar una diapositiva con el título de referencias. Este comportamiento se puede cambiar para que las referencias aparezcan [donde se desee](#referencias). 
+
+## Transiciones y animaciones {transition="fade-in slide-out"}
+
+Puede transiciones entre diapositivas y animaciones en los elementos de esta.
+
+::: {.fragment .fade-in}
+Fundido de entrada
+:::
+
+::: {.fragment .fade-up}
+Deslizar hacia arriba durante el fundido
+:::
+
+::: {.fragment .fade-left}
+Deslizar a la izquierda durante el fundido
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Fundido de entrada y luego de salida
+:::
+
+. . .
+
+::: {.fragment .strike}
+Tachar
+:::
+
+::: {.fragment .highlight-red}
+Resaltar en rojo
+:::
+
+
+# {background-color="#BB954E" transition="slide-in"}
+
+[Y mucho más…]{.r-fit-text .color-letra}
+
+## Publicando la presentación
+
+Hay dos formas principales de publicar las presentaciones de Reveal:
+
+-   Como un archivo PDF siguiendo [estos pasos](https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf).
+
+-   Como archivo HTML. Para HTML, a menudo es más conveniente distribuir la presentación como un único archivo autocontenido. Para ello agregre `embed-resources` en las opciones:
+
+    ```yml
+    ---
+    title: "XII Congreso Colombiano de Botánica"
+    author: "Álex Espinosa-Correa"
+    format: 
+      xii-ccb-revealjs:
+        embed-resources: true
+    ---
+    ````
+
+Para más detallas consulte la [guía](https://quarto.org/docs/presentations/revealjs/presenting.html#publishing).
+
+## Más información
+
+-   [Introducción a Quarto](https://quarto.org/)
+-   [Grupo de Estudios Botánicos GEOBOTA](http://geobota.github.io/)
+-   [Guía de Quarto para formatos personalizados](https://quarto.org/docs/extensions/formats.html)
+-   [Guía de Quarto para presentaciones en Revealjs](https://quarto.org/docs/presentations/revealjs/)
+-   [XII Congreso Colombiano de Botánica](http://congresobotanica.org)
+
+## Referencias {#referencias visibility="uncounted"}
+
+::: {#refs}
+:::
+
+## {background-image="_extensions/xii-ccb/assets/final_2.jpg" background-size="cover"}
