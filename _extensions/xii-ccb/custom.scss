@@ -1,0 +1,22 @@
+/*-- scss:defaults --*/
+
+// Background of the presentation
+$body-bg: #F3EADA;
+
+// Primary/body text
+$body-color: #51512A;
+$font-family-sans-serif: "Arial", sans-serif !default;
+
+// Headings
+$presentation-heading-color: #BB954E;
+$presentation-heading-font: "Libre Franklin", sans-serif !default;
+
+
+/*-- scss:rules --*/
+
+.reveal .slide-logo {
+  height: 100px !important;
+  width: 175px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
