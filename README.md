@@ -1,4 +1,4 @@
-# Quarto Revealjs XII Congrego Colombiano de Botánica theme
+# XII Congrego Colombiano de Botánica Quarto Revealjs theme
 
 Una extensión de [Quarto](https://quarto.org) para crear presentaciones Reveal.js para el [XII Congreso Colombiano de Botánica](http://congresobotanica.org) hecha por [Álex Espinosa-Correa](https://alexespinosaco.github.io) basada en la [presentación sugerida](https://congresobotanica.org/wp-content/uploads/2024/10/5.-QUINTA-Circular-XII-CCB-UNICAUCA-1.pdf) por los organizadores.
 
