@@ -15,7 +15,8 @@ bibliography: references.bib
 csl: apa.csl
 
 format:
-  xii-ccb-revealjs: default
+  xii-ccb-revealjs:
+    embed-resources: true
 ---
 
 ## Introducción
@@ -96,6 +97,8 @@ sólo el resultado:
 
 ```{r}
 #| echo: false
+#| fig-width: 8
+#| fig-height: 3.6
 #| fig-dpi: 300
 
 library(ggplot2)
@@ -121,6 +124,8 @@ O ambas cosas:
 
 ```{r}
 #| echo: true
+#| fig-width: 8
+#| fig-height: 3.6
 #| output-location: column-fragment
 #| fig-dpi: 300
 

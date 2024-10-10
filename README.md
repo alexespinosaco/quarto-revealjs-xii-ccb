@@ -2,7 +2,9 @@
 
 Una extensión de [Quarto](https://quarto.org) para crear presentaciones Reveal.js para el [XII Congreso Colombiano de Botánica](http://congresobotanica.org) hecha por [Álex Espinosa-Correa](https://alexespinosaco.github.io) basada en la [presentación sugerida](https://congresobotanica.org/wp-content/uploads/2024/10/5.-QUINTA-Circular-XII-CCB-UNICAUCA-1.pdf) por los organizadores.
 
-![](slide.png)
+Clic en la captura de pantalla o [aquí](https://alexespinosaco.github.io/quarto-revealjs-xii-ccb/) para acceder a una demostración.
+
+[![](slide.png)](https://alexespinosaco.github.io/quarto-revealjs-xii-ccb/)
 
 ## Instalación
 
