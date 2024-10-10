@@ -26,7 +26,7 @@ format:
 
 -   Quarto admite diversos formatos para crear presentaciones, entre ellos: [reveal.js](https://quarto.org/docs/presentations/revealjs/), PowerPoint, Beamer. Este es una pequeña demostración de las posibilidades de usar esta plantilla.
 
-::: {.callout-warning}
+::: {.callout-warning title="Importante"}
 Esta presentación incluye código en R únicamente con fines demostrativos. Si no cuentas con este software, procede con precaución; puedes eliminar el código o desactivarlo según sea necesario.
 :::
 
@@ -47,6 +47,16 @@ Esto instalará la extensión y creará varios archivos:
 -   `*.qmd`: archivo que puede utilizar como punto de partida para su presentación.
 
 -   `*.Rproj`: archivo de configuración de los proyectos de RStudio. 
+
+-   `apa.csl`: archivo `.csl` del formato de citación APA.
+
+-   `references.bib`: archivo `bib` que contiene una referencia.
+
+::: {.callout-warning title="Importante"}
+Si está usando el `*.qmd` proporcionado como ejemplo, para el correcto renderizado de este, es **muy importante** que dentro de la carpeta `_extesion` mueva la carpeta `xii-ccb` fuera de la carpeta `alexespinosaco`.
+
+Así mismo, es importante que cuente con los archivos `apa.csl` y `references.bib`. AEstos pueden eliminarse si no va a utilizar citas.
+:::
 
 # {background-color="#BB954E" transition="slide-in"}
 
