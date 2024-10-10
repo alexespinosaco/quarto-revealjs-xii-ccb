@@ -57,3 +57,19 @@ format: xii-ccb-revealjs
 -  [Guía de Quarto para formatos personalizados](https://quarto.org/docs/extensions/formats.html)
 -  [Guía de Quarto para presentaciones en Revealjs](https://quarto.org/docs/presentations/revealjs/)
 -  [XII Congreso Colombiano de Botánica](http://congresobotanica.org)
+
+## ¿Quieres aprender Quarto?
+
+¿Te interesó esta presentación y te gustaría aprender a crearla por ti mismo? ¡Tenemos una invitación para ti!
+
+En el XII Congreso Colombiano de Botánica ofreceremos el curso "Investigación Reproducible con Quarto", donde aprenderás todo lo necesario para realizar tus propias presentaciones utilizando Quarto.
+
+¡Aún estás a tiempo de inscribirte!
+
+📅 Fecha: 3 de noviembre del 2024\
+📍 Lugar: Popayán, Colombia\
+🕗 Duración: 8 horas\
+👥 Cupos: 20\
+💲 Inversión: desde $50.000 COP ([ver detalles](https://geobota.github.io/xii-ccb-quarto/#sec-inversion))\
+✍️ Registro: Disponible en breve\
+✉️ Más información: [alex.espinosa\@udea.edu.co](mailto:alex.espinosa@udea.edu.co)
